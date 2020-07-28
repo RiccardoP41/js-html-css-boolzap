@@ -10,6 +10,10 @@
     clear: both;
 }
 
+body{
+    font-family: 'Lato', sans-serif;
+}
+/* ***************STRUTTURA************* */
 .sfondo {
     width: 100vw;
     height: 100vh;
@@ -20,7 +24,7 @@
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     height: 90%;
     min-width: 800px;
     display: flex;
@@ -29,7 +33,7 @@
 }
 
 .left {
-    width: 350px;
+    width: 500px;
     /* height: 100%; */
     border: 1px solid black;
 }
@@ -44,29 +48,45 @@
 /* LEFT */
 .profilo {
     height: 70px;
-    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: rgb(237,237,237);
 }
 
 .notifiche {
-    height: 70px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
     background-color: skyblue;
 }
 
 .input {
     height: 35px;
-    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 6px;
+    background-color: rgb(246,246,246);
 }
 
 .contatti {
-    height: calc(100% - 175px);
+    height: calc(100% - 185px);
     background-color: pink;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .amico {
     height: 70px;
     width: 100%;
-    border: 1px solid orange;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid rgb(237,237,237);
+    background-color: white;
 }
 
 /* RIGHT */
@@ -83,4 +103,105 @@
     bottom: 0;
     background-color: red;
 
+}
+
+/* ************PARTICOLARI**************** */
+
+/* LEFT */
+i {
+    font-size: 20px;
+    color: rgb(145,145,145);
+}
+
+/* profilo */
+.immagine {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;
+}
+
+.immagine img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.icone {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.icone li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* notifiche */
+.notifiche .immagine {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.notifiche .immagine i {
+    color: skyblue;
+    font-size: 22px;
+}
+
+.ricevi-notifiche p {
+    font-size: 15px;
+}
+
+.ricevi-notifiche a {
+    font-size: 12px;
+    color: rgb(120,120,120);
+}
+
+/* input */
+.input-dentro {
+    background-color: white;
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    padding-left: 20px;
+    line-height: 20px;
+}
+
+.input-dentro i {
+    font-size: 15px;
+}
+
+.input-dentro input {
+    width: 350px;
+    margin-left: 20px;
+    border: none;
+}
+
+/*contatti */
+.tizio {
+    padding-left: 20px;
+    width: calc(100% - 55px);
+}
+
+.nome-ora {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nome-ora h4 {
+    font-weight: normal;
+}
+
+.nome-ora span {
+    font-size: 12px;
+    color: rgb(120,120,120);
+}
+
+.scritto p {
+    font-size: 12px;
+    color: rgb(120,120,120);
 }
