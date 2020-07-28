@@ -10,6 +10,7 @@
     clear: both;
 }
 
+
 body{
     font-family: 'Lato', sans-serif;
 }
@@ -20,7 +21,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: tomato;
+    background-image: url(https://s1.1zoom.me/b5050/820/Logo_Emblem_MarvelRed_435550_1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .container {
@@ -28,21 +31,15 @@ body{
     height: 90%;
     min-width: 800px;
     display: flex;
-    /* cancellare */
-    background-color: azure;
 }
 
 .left {
     width: 500px;
-    /* height: 100%; */
-    border: 1px solid black;
 }
 
 .right {
     width: calc(100% - 350px);
     position: relative;
-    /* height: 100%; */
-    border: 1px solid red;
 }
 
 /* LEFT */
@@ -77,6 +74,7 @@ body{
     height: calc(100% - 185px);
     background-color: pink;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .amico {
@@ -91,17 +89,26 @@ body{
 
 /* RIGHT */
 .chat {
-    height: calc(100% - 140px);
-    border: 3px solid blue;
-    overflow: hidden;
+    height: calc(100% - 120px);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://wallpaperaccess.com/full/31584.png);
+    background-position: center;
+    background-size: cover;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .invia {
     width: 100%;
-    height: 70px;
+    height: 50px;
     position: absolute;
     bottom: 0;
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(237,237,237);
 
 }
 
@@ -111,6 +118,10 @@ body{
 i {
     font-size: 20px;
     color: rgb(145,145,145);
+}
+
+h4 {
+    font-weight: normal;
 }
 
 /* profilo */
@@ -192,10 +203,6 @@ i {
     justify-content: space-between;
 }
 
-.nome-ora h4 {
-    font-weight: normal;
-}
-
 .nome-ora span {
     font-size: 12px;
     color: rgb(120,120,120);
@@ -204,4 +211,56 @@ i {
 .scritto p {
     font-size: 12px;
     color: rgb(120,120,120);
+}
+
+/* RIGHT */
+
+/* profilo */
+.interlocutore {
+    display: flex;
+    align-items: center;
+}
+
+.nome-tizio {
+    padding-left: 20px;
+}
+
+.nome-tizio p {
+    font-size: 12px;
+    color:rgb(120,120,120);
+}
+
+/* chat/main */
+
+.ricevuto {
+    font-size: 14px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    align-self: flex-start;
+}
+
+.inviato {
+    font-size: 14px;
+    background-color: rgb(220,248,198);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    align-self: flex-end;
+}
+
+/* invia/footer */
+.invia .icon {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.invia input {
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 30px;
+    padding: 0 30px;
 }
