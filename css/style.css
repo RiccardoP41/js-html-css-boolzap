@@ -231,29 +231,42 @@ h4 {
 
 /* chat/main */
 
-.ricevuto {
+.messaggio {
+    max-width: 40%;
+    min-width: 30%;
     font-size: 14px;
-    background-color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ricevuto {
+    background-color: white;
     align-self: flex-start;
 }
 
 .inviato {
-    font-size: 14px;
     background-color: rgb(220,248,198);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
     align-self: flex-end;
 }
 
+.messaggio span{
+    font-size: 12px;
+    text-align: right;
+    color:rgb(120,120,120);
+
+}
 /* invia/footer */
 .invia .icon {
     width: 10%;
     display: flex;
     justify-content: center;
+}
+
+.invia .icon:hover{
+    cursor: pointer;
 }
 
 .invia input {
@@ -262,4 +275,8 @@ h4 {
     border: none;
     border-radius: 30px;
     padding: 0 30px;
+}
+
+.template {
+    display: none;
 }
