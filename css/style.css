@@ -86,17 +86,29 @@ body{
     background-color: white;
 }
 
+.amico:hover {
+    background-color: rgb(215,215,215);
+}
+
+.amico.active {
+    background-color: rgb(229,229,229);
+}
+
 /* RIGHT */
 .chat {
     height: calc(100% - 120px);
     padding: 30px;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-image: url(https://wallpaperaccess.com/full/31584.png);
     background-position: center;
     background-size: cover;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+.active{
+    display: flex;
 }
 
 .invia {
@@ -240,7 +252,37 @@ h4 {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
+ /* ---------Non importante, solo per esercitarmi--------- */
+.triangolo {
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
+
+.t-ricevuto {
+    border-bottom: 15px solid white;
+    border-left:   15px solid transparent;
+    border-right:  15px solid transparent;
+    position: absolute;
+    transform: translate();
+    top: 0;
+    left: -13px;
+    transform: rotate(180deg);
+}
+
+.t-inviato {
+    border-bottom: 15px solid rgb(220,248,198);
+    border-left:   15px solid transparent;
+    border-right:  15px solid transparent;
+    position: absolute;
+    transform: translate();
+    top: 0;
+    right: -13px;
+    transform: rotate(180deg);
+}
+/* ------------------------------------------ */
 
 .ricevuto {
     background-color: white;
