@@ -28,7 +28,7 @@ $(document).ready(function(){
 //FUNZIONI
     function app() {
         var d = new Date();                             //trovo l'orario con ore e minuti
-        var ore = d.getHours() + ":" + d.getMinutes();
+        var ore = d.getHours() + ":" + piuzero(d.getMinutes());
         var valore = $("#msg").val();                   //trovo il valore del contenuto dell'input
         var chat = $(".template .messaggio").clone();   //clono il temeplate
         chat.children(".text").text(valore);            //inserisco il testo e l'orario nei giusti contenitori
@@ -37,8 +37,7 @@ $(document).ready(function(){
         chat.children(".triangolo").addClass("t-inviato") // Non importante
         $(".chat").append(chat);                        //"stampo" il msg nella chat
         $("#msg").val("");                              //resetto lo spazio input dopo l'invio
-        var posizione = $('.chat .messaggio:last-child').position();  //scroll
-        $('.chat').scrollTop(posizione.top);                          // "all credits gone to Claudio Cenghialta"
+        $('.chat').scrollTop(5000);
 
         setTimeout(risposta, 1000);
 
@@ -51,12 +50,19 @@ $(document).ready(function(){
             chat.addClass("ricevuto");
             chat.children(".triangolo").addClass("t-ricevuto") // Non importante
             $(".chat").append(chat);
-            $('.chat').scrollTop(posizione.top);      // "all credits gone to Claudio Cenghialta"
+            $('.chat').scrollTop(5000);
         }
     }
 
     function numeroRandom(min,max){
     return Math.floor(Math.random()*(max-min+1)+min);
-}
+    }
+
+    function piuzero (i){
+    if(i < 10){
+        i = "0" + 1;
+    }
+    return i;
+    }
 // chiusura document.ready
 });
