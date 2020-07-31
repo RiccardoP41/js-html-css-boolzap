@@ -34,7 +34,24 @@ $(document).ready(function(){
 
     $(".amico").click(selezionaContatto);
 
+    $("#ricerca").keyup(ricerca)
+
 //FUNZIONI
+
+    function ricerca() {
+        var testo = $("#ricerca").val().toLowerCase();
+        $(".amico").each(function () {
+            if ($(this).find("h4").text().toLowerCase().includes(testo)) {
+                $(this).show()
+            } else {
+                $(this).hide()
+            }
+        })
+
+        // ripartiamo da qui
+
+
+    }
 
     function selezionaContatto() {
         $(".amico").removeClass("active");       //rimuovo active
